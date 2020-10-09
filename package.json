@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/mapbox/mts-data-sync.git"
   },
-  "author": "jbranigan",
-  "license": "FreeBSD",
+  "author": "Mapbox",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/mapbox/mts-data-sync/issues"
   },
