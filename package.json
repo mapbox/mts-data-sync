@@ -1,7 +1,7 @@
 {
-  "name": "mts-data-sync-internal",
+  "name": "mts-data-sync",
   "version": "0.1.1",
-  "description": "sync local geojson data to a Mapbox tileset using the MTS API",
+  "description": "Sync local geojson data to a Mapbox tileset using the MTS API",
   "main": "index.js",
   "bin": {
     "mtsds": "./index.js"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mapbox/mts-data-sync-internal.git"
+    "url": "git+https://github.com/mapbox/mts-data-sync.git"
   },
   "author": "jbranigan",
-  "license": "ISC",
+  "license": "FreeBSD",
   "bugs": {
-    "url": "https://github.com/mapbox/mts-data-sync-internal/issues"
+    "url": "https://github.com/mapbox/mts-data-sync/issues"
   },
-  "homepage": "https://github.com/mapbox/mts-data-sync-internal#readme",
+  "homepage": "https://github.com/mapbox/mts-data-sync#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "babel-eslint": "10.1.0",
