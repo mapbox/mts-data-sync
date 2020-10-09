@@ -1,0 +1,48 @@
+{
+  "name": "mts-data-sync-internal",
+  "version": "0.1.1",
+  "description": "sync local geojson data to a Mapbox tileset using the MTS API",
+  "main": "index.js",
+  "bin": {
+    "mtsds": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/mts-data-sync-internal.git"
+  },
+  "author": "jbranigan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/mts-data-sync-internal/issues"
+  },
+  "homepage": "https://github.com/mapbox/mts-data-sync-internal#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "babel-eslint": "10.1.0",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-xss": "^0.1.10",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-import": "^2.22.0",
+    "@mapbox/eslint-config-mapbox": "^2.0.1"
+  },
+  "dependencies": {
+    "@mapbox/geojsonhint": "^3.0.0",
+    "@mapbox/mapbox-sdk": "^0.10.0",
+    "@mapbox/tile-cover": "^3.0.2",
+    "@mapbox/tilebelt": "^1.0.1",
+    "@turf/area": "^6.0.1",
+    "arg": "^4.1.3",
+    "await-sleep": "0.0.1",
+    "d3-format": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "geojson-stream": "^0.1.0",
+    "inquirer": "^7.2.0",
+    "ndjson": "^1.5.0",
+    "node-fetch": "^2.6.0",
+    "open": "^7.0.4"
+  }
+}
