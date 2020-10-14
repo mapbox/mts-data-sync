@@ -28,7 +28,7 @@ This will prompt you for your Mapbox username, and then for the secret access to
 
 ## Usage
 
-Prepare your [GeoJSON data](https://docs.mapbox.com/mapbox-tiling-service/overview/tileset-sources/). **This tool converts your standard GeoJSON data to a line-delimited GeoJSON file, the format MTS requires.** This tool does not validate the input GeoJSON, if you are encountering errors, please make sure your GeoJSON data is valid.
+Prepare your [GeoJSON data](https://docs.mapbox.com/mapbox-tiling-service/overview/tileset-sources/). **This tool converts your standard GeoJSON data to a line-delimited GeoJSON file, the format MTS requires.** This tool does not validate the input GeoJSON, if you are encountering errors, please make sure your GeoJSON data is valid. GeoJSON [must be in the WGS84](https://tools.ietf.org/html/rfc7946#section-4) (EPSG: 4326) coordinate reference system.
 
 There are five commands available:
 
