@@ -8,6 +8,7 @@ import {
   createTilesetSource,
   validateRecipe,
   createTileset,
+  updateRecipe,
   publishTileset,
   checkStatus,
   tilesetExists
@@ -27,8 +28,10 @@ async function runServices(cnf, recipe) {
     // await sleep(1500);
     if (!tilesetAlreadyExists) {
       await createTileset(cnf.tilesetId, cnf.tilesetName, recipe);
-      await sleep(1500);
+    } else {
+      await updateRecipe(cnf.tilesetId, recipe);
     }
+    await sleep(1500);
     await publishTileset(cnf.tilesetId);
     await sleep(1500);
     await checkStatus(cnf.tilesetId);

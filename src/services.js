@@ -87,6 +87,20 @@ const createTileset = async function (tilesetId, tilesetName, recipe) {
   }
 };
 
+// if the tileset exists, make sure it has the latest recipe
+const updateRecipe = async function (tilesetId, recipe) {
+  try {
+    const response = await mtsService.updateRecipe({
+      tilesetId: `${process.env.MTS_USERNAME}.${tilesetId}`,
+      recipe: recipe
+    }).send();
+    console.log(response.body);
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // publish the tileset
 const publishTileset = async function (tilesetId) {
   try {
@@ -139,6 +153,7 @@ export {
   validateRecipe,
   tilesetExists,
   createTileset,
+  updateRecipe,
   publishTileset,
   tilesetStatus,
   checkStatus
