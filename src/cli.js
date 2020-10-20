@@ -4,28 +4,9 @@ import sync from "./sync";
 import estimate from "./estimate";
 import convert from "./convert";
 import setToken from "./token";
-import fetch from "node-fetch";
 import os from "os";
 
 const eol = os.EOL;
-
-async function checkToken() {
-  // logs a pluginName for internal solution tracking
-  try {
-    const token = process.env.MTS_TOKEN;
-    const url = "https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/0/0/0.vector.pbf?pluginName=MTSDataSync&access_token=";
-    await fetch(url + token).then(res => {
-      if (res) {
-        return;
-      } else {
-        console.log("token failed");
-      }
-    });
-  } catch (err) {
-    console.log(err);
-  }
-
-}
 
 function argsToOptions(rawArgs) {
   const args = arg(
@@ -58,7 +39,6 @@ export async function cli(args) {
     console.log("No access token or username in .env. Running token installation script.");
     setToken();
   } else {
-    await checkToken();
 
     let options = {};
     try {
