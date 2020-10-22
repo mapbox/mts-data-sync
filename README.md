@@ -1,6 +1,6 @@
 # Mapbox Tiling Service (MTS) Data Sync
 
-Use this tool to publish data directly to the [Mapbox Tiling Service](https://docs.mapbox.com/mapbox-tiling-service/overview/) without writing any code. The tool runs Node.js from the terminal. It may be helpful to use a text editor like VS Code, Sublime Text, or Atom to view and edit “dot” files and recipe files. If you prefer to use Python or if you want more control over how you data pipeline works, check out the [Tilesets CLI](https://docs.mapbox.com/mapbox-tiling-service/overview/#tilesets-cli).
+Use this tool to publish data directly to the [Mapbox Tiling Service](https://docs.mapbox.com/mapbox-tiling-service/overview/) without writing any code. The tool runs Node.js from the terminal. It may be helpful to use a text editor like VS Code, Sublime Text, or Atom to view and edit “dot” files and recipe files. If you prefer to use Python or if you want more control over how your data pipeline works, check out the [Tilesets CLI](https://docs.mapbox.com/mapbox-tiling-service/overview/#tilesets-cli).
 
 ## Installation
 
