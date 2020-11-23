@@ -10,21 +10,21 @@ MTS Data Sync requires that Node.js and npm are installed. If you don't have Nod
 
 2. Install the dependencies with:
 
-`npm install`
+   `npm install`
 
 3. This application is designed to **run anywhere**, not just the directory where it's installed. This allows for a workflow where you can `cd` into any directory with GeoJSON and work from there. To have the command `mtsds` (MTS data sync) available anywhere, run:
 
-`npm link`
+   `npm link`
 
 4. Create a secret access token in your [Mapbox.com account](https://account.mapbox.com/access-tokens/). This is different from your normal access tokens, because it has write access to your data. *Don’t use this token in your web apps*. You’ll need to add TILESETS:LIST, TILESETS:READ, and TILESETS:WRITE scopes to this token when you create it. Copy this token to your clipboard after creating it, or keep the page open during the next step. 
 
-![Mapbox token scopes](./assets/token-scope.png)
+   ![Mapbox token scopes](./assets/token-scope.png)
 
 5. To complete installation, run:
 
-`mtsds --token`
+   `mtsds --token`
 
-This will prompt you for your Mapbox username, and then for the secret access token you just created. Confirm what you entered, and your information will be saved to your computer.
+   This will prompt you for your Mapbox username, and then for the secret access token you just created. Confirm what you entered, and your information will be saved to your computer.
 
 ## Usage
 
