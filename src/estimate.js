@@ -70,7 +70,7 @@ const sizeJob = function (pwd, cnf, recipe) {
       const area = calculateTileArea(allQuads);
 
       if (sku === "lowzoom_free") {
-        console.log("This data is processed for free.${eol}");
+        console.log(`This data is processed for free.${eol}`);
       } else {
         const priceEstimate = skuInvoice(sku, area);
         console.log(`Tiling ${priceEstimate.formattedTotalSubunits} in the ${priceEstimate.skuName} tier${eol}`);
