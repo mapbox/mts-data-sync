@@ -58,7 +58,7 @@ export async function cli(args) {
     } else if (options.token) {
       setToken();
     } else {
-      console.log(`Run mtsds with valid options: ${eol}--config filename.geojsonl, ${eol}--convert filename.geojsonl, ${eol}--sync, ${eol}--token, ${eol}or --estimate`);
+      console.log(`Run mtsds with valid options: ${eol}--config filename.geojson, ${eol}--convert filename.geojson, ${eol}--sync, ${eol}--token, ${eol}or --estimate`);
     }
   }
 }
