@@ -1,5 +1,5 @@
 import fs from "fs";
-import path from "path";
+import { readConfig, readRecipe } from "./utils";
 import ndjson from "ndjson";
 import tarea from "@turf/area";
 import tilebelt from "@mapbox/tilebelt";
@@ -85,19 +85,9 @@ const sizeJob = function (pwd, cnf, recipe) {
 
 export default function estimate() {
   const pwd = process.cwd();
-  let cnf, recipe;
-  try {
-    cnf = JSON.parse(fs.readFileSync(path.join(pwd, "mts-config.json")));
-  } catch (err) {
-    console.log("Missing mts-config.json in this directory.");
-    console.log("Run mtsds --config to generate.");
-  }
-  try {
-    recipe = JSON.parse(fs.readFileSync(path.join(pwd, "mts-recipe.json")));
-  } catch (err) {
-    console.log("Missing mts-recipe.json in this directory.");
-    console.log("Run mtsds --config to generate.");
-  }
+
+  const cnf = readConfig(pwd);
+  const recipe = readRecipe(pwd);
 
   if (cnf && recipe) {
     sizeJob(pwd, cnf, recipe);

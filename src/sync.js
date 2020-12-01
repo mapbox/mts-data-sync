@@ -1,7 +1,5 @@
-// import inquirer from "inquirer";
-import fs from "fs";
-import path from "path";
 import sleep from "await-sleep";
+import { readConfig, readRecipe } from "./utils";
 import {
   initService,
   deleteTilesetSource,
@@ -42,19 +40,9 @@ async function runServices(cnf, recipe) {
 
 export default function sync() {
   const pwd = process.cwd();
-  let cnf, recipe;
-  try {
-    cnf = JSON.parse(fs.readFileSync(path.join(pwd, "mts-config.json")));
-  } catch (err) {
-    console.log("Missing mts-config.json in this directory.");
-    console.log("Run mtsds --config to generate.");
-  }
-  try {
-    recipe = JSON.parse(fs.readFileSync(path.join(pwd, "mts-recipe.json")));
-  } catch (err) {
-    console.log("Missing mts-recipe.json in this directory.");
-    console.log("Run mtsds --config to generate.");
-  }
+
+  const cnf = readConfig(pwd);
+  const recipe = readRecipe(pwd);
 
   if (cnf && recipe) {
     runServices(cnf, recipe);
