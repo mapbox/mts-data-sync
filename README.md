@@ -159,6 +159,6 @@ This page will open in your browser:
 
 ## Additional Options
 
-This tool is designed to support workflows with data that changes periodically. When your data changes and you want to update your tileset (hence "data sync"), you can use the `--convert file.geojsonl` option. Assuming you modified your file in place, or overwrote it with new data, use this option to convert the GeoJSON to the line-delimited format. Once that's ready, you can use the `--sync` option to republish the data with the same recipe and settings.
+This tool is designed to support workflows with data that changes periodically. When your data changes and you want to update your tileset (hence "data sync"), you can use the `--convert file.geojson` option. Assuming you modified your file in place, or overwrote it with new data, use this option to convert the GeoJSON to the line-delimited format. Once that's ready, you can use the `--sync` option to republish the data with the same recipe and settings.
 
 If you need to change your secret access token, use the `--token` option to enter a new token.
