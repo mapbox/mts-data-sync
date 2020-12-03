@@ -146,9 +146,9 @@ const checkStatus = async function (tilesetId) {
       console.log(response.body);
       tilesetStatus(tilesetId);
     } else if (response.body.status === "success") {
+      console.log(await jobStatus(tilesetId, response.body.latest_job));
       console.log(`Complete: opening https://studio.mapbox.com/tilesets/${response.body.id}/`);
       open(`https://studio.mapbox.com/tilesets/${response.body.id}/`, { url: true });
-      console.log(await jobStatus(tilesetId, response.body.latest_job));
     } else {
       console.log("Error creating tileset", response.body);
       console.log(await jobStatus(tilesetId, response.body.latest_job));
@@ -157,7 +157,6 @@ const checkStatus = async function (tilesetId) {
     console.log(error);
   }
 };
-
 
 export {
   initService,
