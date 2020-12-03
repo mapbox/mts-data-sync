@@ -125,22 +125,14 @@ const tilesetStatus = function (tilesetId) {
 // Check job status and report warnings
 const jobStatus = async function (tilesetId, jobId) {
   console.log("Checking completed job status...");
-  const response = await mtsService.tilesetJob({ tilesetId: `${process.env.MTS_USERNAME}.${tilesetId}`, jobId }).send();
-  return response.body;
-};
-
-const checkJobWarnings = async function (tilesetId, job) {
-  console.log("Checking job warnings");
-  const status = await jobStatus(tilesetId, job);
-  console.log(status);
-  console.log(status.warnings);
-  if (status.warnings){
-    console.log("Warnings found", status.warnings);
-  } else {
-    console.log("Tileset created without warnings.");
+  try {
+    const response = await mtsService.tilesetJob({ tilesetId: `${process.env.MTS_USERNAME}.${tilesetId}`, jobId }).send();
+    return response.body;
+  } catch (error) {
+    console.log(error);
+    return;
   }
 };
-
 
 // request the status every 10s, logging the status to the console until it's 'success'
 // provide some kind of preview / visual inspector
@@ -156,14 +148,10 @@ const checkStatus = async function (tilesetId) {
     } else if (response.body.status === "success") {
       console.log(`Complete: opening https://studio.mapbox.com/tilesets/${response.body.id}/`);
       open(`https://studio.mapbox.com/tilesets/${response.body.id}/`, { url: true });
-      // Nice to also have tileStats printed, but this could be swapped for checkJobWarnings
       console.log(await jobStatus(tilesetId, response.body.latest_job));
-      // await checkJobWarnings(tilesetId, response.body.latest_job);
     } else {
       console.log("Error creating tileset", response.body);
       console.log(await jobStatus(tilesetId, response.body.latest_job));
-      // const jobStatusUrl = `https://api.mapbox.com/tilesets/v1/${process.env.MTS_USERNAME}.${tilesetId}/jobs/${response.body.latest_job}?access_token=${accessToken}`;
-      // open(jobStatusUrl, { url: true });
     }
   } catch (error) {
     console.log(error);
