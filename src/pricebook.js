@@ -31,7 +31,7 @@ const skus = {
     id: "processing10m",
     name: "Tileset Processing 10m",
     description:
-      "The event of creating a vector tileset with a max zoom between 6-10 or raster\
+      "The event of creating a tileset with a max zoom between 6-10 or a GeoTIFF\
       tileset with a max zoom between 7-11. Cost depends on the area of all tiles that\
       were created. Tilesets created in Mapbox Studio are exempt.",
     documentationUrl: "https://mapbox.com/pricing/#processing10m",
@@ -56,7 +56,7 @@ const skus = {
     id: "processing1m",
     name: "Tileset Processing 1m",
     description:
-      "The event of creating a vector tileset with a max zoom between 11-13 or raster\
+      "The event of creating a tileset with a max zoom between 11-13 or a GeoTIFF\
       tileset with a max zoom between 12-14. Cost depends on the area of all tiles that\
       were created. Tilesets created in Mapbox Studio are exempt.",
     documentationUrl: "https://mapbox.com/pricing/#processing1m",
@@ -81,7 +81,7 @@ const skus = {
     id: "processing30cm",
     name: "Tileset Processing 30cm",
     description:
-      "The event of creating a vector tileset with a max zoom between 14-16 or raster\
+      "The event of creating a tileset with a max zoom between 14-16 or a GeoTIFF\
       tileset with a max zoom between 15-17. Cost depends on the area of all tiles that\
       were created. Tilesets created in Mapbox Studio are exempt.",
     documentationUrl: "https://mapbox.com/pricing/#processing30cm",
@@ -106,7 +106,7 @@ const skus = {
     id: "processing1cm",
     name: "Tileset Processing 1cm",
     description:
-      "The event of creating a vector tileset with a max zoom greater than 16 or raster\
+      "The event of creating a tileset with a max zoom greater than 16 or a GeoTIFF\
       tileset with a max zoom greater than 17. Cost depends on the area of all tiles that\
       were created. Tilesets created in Mapbox Studio are exempt.",
     documentationUrl: "https://mapbox.com/pricing/#processing1cm",
@@ -131,7 +131,7 @@ const skus = {
     id: "hosting10m",
     name: "Tileset Hosting 10m",
     description:
-      "The event of storing a vector tileset with a max zoom between 6-10 or raster\
+      "The event of storing a tileset with a max zoom between 6-10 or a GeoTIFF\
       tileset with a max zoom between 7-11. Cost depends on the area of all tiles that\
       were created multiplied by the number of days each tileset has existed in your\
       account during your billing period. Mapbox default tilesets and tilesets created\
@@ -158,7 +158,7 @@ const skus = {
     id: "hosting1m",
     name: "Tileset Hosting 1m",
     description:
-      "The event of storing a vector tileset with a max zoom between 11-13 or raster\
+      "The event of storing a tileset with a max zoom between 11-13 or a GeoTIFF\
       tileset with a max zoom between 12-14. Cost depends on the area of all tiles that\
       were created multiplied by the number of days each tileset has existed in your\
       account during your billing period. Mapbox default tilesets and tilesets created\
@@ -185,7 +185,7 @@ const skus = {
     id: "hosting30cm",
     name: "Tileset Hosting 30cm",
     description:
-      "The event of storing a vector tileset with a max zoom between 14-16 or raster\
+      "The event of storing a tileset with a max zoom between 14-16 or a GeoTIFF\
       tileset with a max zoom between 15-17. Cost depends on the area of all tiles that\
       were created multiplied by the number of days each tileset has existed in your\
       account during your billing period. Mapbox default tilesets and tilesets create\
@@ -212,7 +212,7 @@ const skus = {
     id: "hosting1cm",
     name: "Tileset Hosting 1cm",
     description:
-      "The event of storing a vector tileset with a max zoom greater than 16 or raster\
+      "The event of storing a tileset with a max zoom greater than 16 or a GeoTIFF\
       tileset with a max zoom greater than 17. Cost depends on the area of all tiles that\
       were created multiplied by the number of days each tileset has existed in your\
       account during your billing period. Mapbox default tilesets and tilesets created\
