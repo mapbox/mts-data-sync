@@ -16,6 +16,7 @@ function argsToOptions(rawArgs) {
       "--estimate": Boolean,
       "--convert": String,
       "--token": Boolean,
+      "--skip-opening-web": Boolean,
       "-c": "--config",
       "-s": "--sync",
       "-e": "--estimate"
@@ -30,7 +31,8 @@ function argsToOptions(rawArgs) {
     sync: args["--sync"] || false,
     estimate: args["--estimate"] || false,
     convert: args["--convert"] || false,
-    token: args["--token"] || false
+    token: args["--token"] || false,
+    skipOpeningWeb: args["--skip-opening-web"] || false
   };
 }
 

@@ -157,6 +157,8 @@ This page will open in your browser:
 
 ![Tileset preview page](./assets/tileset-preview.png)
 
+If you would like to skip opening a website (for example, if this is running as part of a cron job), you can pass in the flag `--skip-opening-web`.
+
 ## Additional Options
 
 This tool is designed to support workflows with data that changes periodically. When your data changes and you want to update your tileset (hence "data sync"), you can use the `--convert file.geojson` option. Assuming you modified your file in place, or overwrote it with new data, use this option to convert the GeoJSON to the line-delimited format. Once that's ready, you can use the `--sync` option to republish the data with the same recipe and settings.

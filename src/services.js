@@ -136,7 +136,7 @@ const jobStatus = async function (tilesetId, jobId) {
 
 // request the status every 10s, logging the status to the console until it's 'success'
 // provide some kind of preview / visual inspector
-const checkStatus = async function (tilesetId) {
+const checkStatus = async function (tilesetId, options) {
   try {
     const response = await mtsService.tilesetStatus({
       tilesetId: `${process.env.MTS_USERNAME}.${tilesetId}`
@@ -148,7 +148,9 @@ const checkStatus = async function (tilesetId) {
     } else if (response.body.status === "success") {
       console.log(await jobStatus(tilesetId, response.body.latest_job));
       console.log(`Complete: opening https://studio.mapbox.com/tilesets/${response.body.id}/`);
-      open(`https://studio.mapbox.com/tilesets/${response.body.id}/`, { url: true });
+      if(!options.skipOpeningWeb) {
+        open(`https://studio.mapbox.com/tilesets/${response.body.id}/`, { url: true });
+      }
     } else {
       console.log("Error creating tileset", response.body);
       console.log(await jobStatus(tilesetId, response.body.latest_job));

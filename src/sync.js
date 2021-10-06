@@ -32,19 +32,19 @@ async function runServices(cnf, recipe) {
     await sleep(1500);
     await publishTileset(cnf.tilesetId);
     await sleep(1500);
-    await checkStatus(cnf.tilesetId);
+    await checkStatus(cnf.tilesetId, options);
   } catch (err) {
     console.log(err);
   }
 }
 
-export default function sync() {
+export default function sync(options) {
   const pwd = process.cwd();
 
   const cnf = readConfig(pwd);
   const recipe = readRecipe(pwd);
 
   if (cnf && recipe) {
-    runServices(cnf, recipe);
+    runServices(cnf, recipe, options);
   }
 }
