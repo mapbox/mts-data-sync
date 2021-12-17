@@ -81,7 +81,7 @@ Note that the recipe is very basic, and defaults to a free-tier, low maximum zoo
 
 Open the new mts-recipe.json file in your text editor to customize [how your data should be tiled](https://docs.mapbox.com/mapbox-tiling-service/examples/). This is where you can set the min and max zoom levels, filter data into separate layers, union data at low zoom levels, and much more. 
 
-Before publishing your data, you can estimate the [cost of the processing job](https://docs.mapbox.com/mapbox-tiling-service/overview/#pricing) and tile hosting by running:
+Before publishing your data, you can estimate the [cost of the processing job](https://docs.mapbox.com/mapbox-tiling-service/guides/pricing/) and tile hosting by running:
 
 `mtsds --estimate`
 
