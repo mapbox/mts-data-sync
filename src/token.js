@@ -21,7 +21,7 @@ async function promptForToken() {
   const answers = await inquirer.prompt(questions);
 
   return {
-    username: answers.username || "error",
+    username: answers.username.toLowerCase() || "error",
     token: answers.sk || "error"
   };
 }
